@@ -1,0 +1,19 @@
+{
+  "name": "picsar-service",
+  "version": "0.0.1",
+  "description": "Service for image processing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JiriPohanka/picsar-service.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JiriPohanka/picsar-service/issues"
+  },
+  "homepage": "https://github.com/JiriPohanka/picsar-service#readme"
+}
