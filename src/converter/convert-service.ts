@@ -2,7 +2,7 @@ import sharp from 'sharp'
 import ConvertParams from "./convert-params"
 
 module.exports = () => {
-    const getConverter = (params : ConvertParams) => {
+    const getConverter = (params: ConvertParams) => {
         const c : sharp.Sharp = sharp()
 
         // default

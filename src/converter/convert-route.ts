@@ -1,12 +1,11 @@
 import express from 'express'
 import multiparty from 'multiparty'
-import { Request } from 'express'
 import ConvertParams from "./convert-params"
 const router = express.Router()
 
 const convertService = require('./convert-service')()
 
-interface RequestWithData extends Request {
+interface RequestWithData extends express.Request {
     data: ConvertParams
 }
 
@@ -33,4 +32,4 @@ router.post('/convert', (req: RequestWithData, res, next) => {
     form.parse(req)
 })
 
-module.exports = router
+export default router

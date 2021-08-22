@@ -1,4 +1,4 @@
 export default interface ConvertParams {
-    greyscale?: string,
-    resize?: string,
+    greyscale?: string
+    resize?: string
 }

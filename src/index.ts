@@ -24,8 +24,8 @@ app.use('/convert*', (req, res, next) => {
     next()
 })
 
-const healthcheckRouter = require('./healthcheck')
-const convertRouter = require('./converter/convert-route')
+import healthcheckRouter from './healthcheck'
+import convertRouter from './converter/convert-route'
 
 app.use('/', [healthcheckRouter, convertRouter])
 

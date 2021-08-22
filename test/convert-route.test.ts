@@ -3,7 +3,7 @@ import express from "express"
 import sharp from 'sharp'
 const app = express()
 
-const convertRoute = require('../src/converter/convert-route')
+import convertRoute from '../src/converter/convert-route'
 
 app.use('/', convertRoute)
 

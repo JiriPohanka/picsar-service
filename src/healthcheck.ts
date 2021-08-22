@@ -12,4 +12,4 @@ router.get('/healthcheck', (req, res) => {
     res.status(200).json({status: 'healthy'})
 })
 
-module.exports = router
+export default router
