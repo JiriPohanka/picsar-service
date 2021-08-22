@@ -1,7 +1,7 @@
-const express = require('express')
-const cors = require('cors')
+import express from 'express'
+import cors from 'cors'
+import chalk from 'chalk'
 const app = express()
-const chalk = require('chalk')
 
 const PORT = 3000
 

@@ -1,6 +1,6 @@
-const request = require("supertest")
-const express = require("express")
-const sharp = require('sharp')
+import request from "supertest"
+import express from "express"
+import sharp from 'sharp'
 const app = express()
 
 const convertRoute = require('../src/converter/convert-route')

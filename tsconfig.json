@@ -1,0 +1,14 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "outDir": "./build",
+    "allowJs": true,
+    "target": "es2020",
+    "module": "commonjs",
+    "types": ["node", "jest"],
+    "moduleResolution": "node",
+    "esModuleInterop": true
+  },
+  "include": ["src/**/*", "test/**/*"],
+  "exclude": ["node_modules"],
+}

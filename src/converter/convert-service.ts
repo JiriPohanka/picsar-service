@@ -1,9 +1,9 @@
-const sharp = require('sharp')
+import sharp from 'sharp'
+import ConvertParams from "./convert-params"
 
 module.exports = () => {
-
-    const getConverter = (params) => {
-        const c = sharp()
+    const getConverter = (params : ConvertParams) => {
+        const c : sharp.Sharp = sharp()
 
         // default
         if (!params) {

@@ -1,10 +1,16 @@
-const express = require('express')
+import express from 'express'
+import multiparty from 'multiparty'
+import { Request } from 'express'
+import ConvertParams from "./convert-params"
 const router = express.Router()
-const multiparty = require('multiparty')
 
 const convertService = require('./convert-service')()
 
-router.post('/convert', (req, res, next) => {
+interface RequestWithData extends Request {
+    data: ConvertParams
+}
+
+router.post('/convert', (req: RequestWithData, res, next) => {
     const form = new multiparty.Form()
     form.on('error', (err) => {next(err)})
     form.on('part', (part) => {
