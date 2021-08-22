@@ -2,17 +2,29 @@ const sharp = require('sharp')
 
 module.exports = () => {
 
-    const convertFile = (fileStream, params, resStream) => {
+    const getConverter = (params) => {
+        const c = sharp()
 
-    }
+        // default
+        if (!params) {
+            return c
+        }
 
-    const getConverter = () => {
-        return sharp()
-            .grayscale()
+        // resize
+        if (params.resize) {
+            const [width, height] = params.resize.split(',').map(n => parseInt(n, 10))
+            c.resize(width)
+        }
+
+        // grayscale
+        if (params.greyscale === 'on') {
+            c.grayscale()
+        }
+
+        return c
     }
 
     return {
-        convertFile,
         getConverter,
     }
 }
